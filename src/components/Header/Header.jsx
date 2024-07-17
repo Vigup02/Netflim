@@ -6,16 +6,8 @@ import styles from './style.module.css';
 const Header = () => {
   return (
     <header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/profil">Profil</Link>
-          </li>
-        </ul>
-      </nav>
+        <Link to="/" id="logo"></Link>
+        <Link class="btnProfile" to="/profil">Mon profil <i class='bx bx-user' ></i></Link>
     </header>
   );
 };
