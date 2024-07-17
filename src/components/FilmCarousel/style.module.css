@@ -2,28 +2,27 @@
 
 .filmCarousel {
     display: flex;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    color: #fff;
+    gap: 2rem;
   }
   
   .filmImage {
     flex: 1;
-    max-width: 100%;
-    overflow: hidden;
+    max-width: 60%;
   }
   
   .filmImage img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 0.5rem;
+    max-height: 26rem;
+    border: 1px #FC80FF solid;
   }
   
   .filmDetails {
     flex: 1;
-    padding: 20px;
+    max-width: 40%;
   }
   
   .filmDetails h2 {

@@ -41,7 +41,7 @@ const Carousel = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
-        autoplay={true}
+        autoplay={{ delay:20000}}
         className="mySwiper"
       >
         {movies.map((movie, index) => (
