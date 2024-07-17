@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import Home from './pages/Home/Home'; // Importez Home comme composant par défaut
 import Profil from './pages/Profil/Profil'; // Importez Profil comme composant par défaut
@@ -7,8 +8,9 @@ import Header from './components/Header/Header'; // Importez le Header comme com
 import s from "./style.module.css"; // Importez les styles
 
 const App = () => {
+
   return (
-    <div className="App">
+    <div className="container-global">
       <Header />
       <div className={s.outlet_container}>
         <Outlet />
