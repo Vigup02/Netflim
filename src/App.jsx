@@ -10,7 +10,8 @@ import s from "./style.module.css"; // Importez les styles
 const App = () => {
 
   return (
-    <div className="container-global">
+    <div>
+
       <Header />
       <div className={s.outlet_container}>
         <Outlet />

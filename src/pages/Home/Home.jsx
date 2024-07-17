@@ -2,15 +2,15 @@
 
 import React from 'react';
 import Carousel from '../../components/Carousel/Carousel';
-import './style.module.css'; // Assurez-vous d'importer le fichier de styles du carousel
-
+import s from './style.module.css';
 const Home = () => {
 
 
   return (
-    <div className="home">
-      <h1>Carousel de Films</h1>
-      <Carousel />
+    <div className={s.carouselBg}>
+      <div className={s.containerGlobal}>
+        <Carousel />
+      </div>
     </div>
   );
   
