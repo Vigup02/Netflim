@@ -1,0 +1,110 @@
+.film-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Position relative pour être placé par rapport à .film-body */
+  z-index: 3; /* Positionne le FilmHero au-dessus de l'image de fond et du gradient */
+  margin-top: 30%; /* Permet au composant de chevaucher l'image de fond */
+  display: flex; /* Flexbox pour aligner les éléments */
+  align-items: flex-end; /* Aligne les éléments en bas */
+  padding: 2rem; /* Espacement interne */
+  color: #FFFFFF; /* Couleur de texte blanche */
+}
+
+.film-details {
+  display: flex; /* Flexbox pour aligner l'affiche et les informations */
+  flex-direction: row;
+}
+  
+.film-poster {
+  flex: 1; /* Laisse de l'espace pour l'affiche */
+  max-width: 300px; /* Largeur maximale de l'affiche */
+}
+
+.film-poster img {
+  width: 100%; /* L'affiche occupe toute la largeur de son conteneur */
+  height: auto; /* Conserve les proportions de l'affiche */
+  border-radius: 16px; /* Bords arrondis de l'affiche */
+}
+
+.film-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* Laisse de l'espace pour les informations du film */
+  margin-left: 2rem; /* Espacement à gauche de l'affiche */
+  gap: auto;
+}
+
+.title_header {
+  display: flex; /* Flexbox pour aligner le titre et la note */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 70%;
+}
+
+.date-genre-duree {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  height: 21px;
+  flex-direction: row;
+  gap: 1%;
+  color: #FC80FF;
+  background-color: #3C003E;
+}
+
+
+.eval {
+  display: flex; /* Flexbox pour aligner les notes et icônes */
+  flex-direction: column;
+  gap: 1%;
+}
+
+.note{
+  color: #090F2A;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #02EC8D;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-top: 8px;
+}
+
+.icone {
+  display: flex;
+  flex-direction: row;
+}
+
+.icone i {
+  margin-left: 0.5rem; /* Espacement entre les icônes */
+  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 20px;
+  color: #E7E3FF;
+  line-height: 150%;
+}
+
+.sum {font-size: 20px;
+  color: #E7E3FF;
+  line-height: 150%;
+}
+
+.film-credits {
+  font-size: 20px;
+  color: #E7E3FF;
+}
