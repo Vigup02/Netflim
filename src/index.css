@@ -153,7 +153,7 @@ header .bx-user{
 }
 
 
-  .filmNoteCarousel {
+  .filmNoteMain {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     background: #02EC8D;
@@ -162,4 +162,11 @@ header .bx-user{
     font-size: 2rem;
     width: fit-content;
   }
+
+
+  .exponent {
+    font-size: 1rem; /* Réduit la taille du texte */
+    vertical-align: super;
+  }
+  
 
