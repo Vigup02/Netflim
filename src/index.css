@@ -1,13 +1,123 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 16px;
+  background: rgb(9,15,42);
+  background: linear-gradient(180deg, rgba(9,15,42,1) 0%, rgba(58,35,98,1) 100%) no-repeat;
 }
+
+body {
+	line-height: 1;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+
+
+.containerGlobal {
+  margin: 0 6rem;
+
+}
+
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding: 3.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a.btnProfile {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: 0.2s;
+  position: relative;
+}
+
+header a.btnProfile::before, header a.btnProfile::after {
+  content: '';
+  position: absolute;
+  border: 2px solid #fff; /* Couleur et épaisseur de la bordure */
+  top: 2px; /* Décale la bordure vers le haut */
+  bottom: 2px; /* Décale la bordure vers le bas */
+  left: 2px; /* Décale la bordure vers la gauche */
+  right: 2px;/* Décale la bordure vers la droite */
+  transition: 0.1s ease-in-out;
+  border-radius: 4px;
+}
+
+
+header a.btnProfile:hover::before, header a.btnProfile:hover::after {
+  position: absolute;
+  border: 4px solid #fff; /* Couleur et épaisseur de la bordure */
+  top: 2px; /* Décale la bordure vers le haut */
+  bottom: 2px; /* Décale la bordure vers le bas */
+  left: 2px; /* Décale la bordure vers la gauche */
+  right: 2px;/* Décale la bordure vers la droite */
+}
+
+
+
+
+header #logo {
+  width: 137px;
+  height: 23px;
+  background-image: url(/src/assets/images/logo.png);
+  background-size: cover;
+}
+
+header .bx-user{
+  color: #fff;
+  font-size: 1rem;
+}
+
