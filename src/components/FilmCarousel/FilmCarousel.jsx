@@ -18,7 +18,7 @@ const FilmCarousel = ({ movie }) => {
         <div className={s.filmDetails}>
           <h2>{title}</h2>
           <p className={s.filmDate}>{release_date}</p>
-          <p className={"filmNoteCarousel"}>{votePercentage}<span className={s.exponent}>%</span></p> {/* Affichage de la note en pourcentage */}
+          <p className={"filmNoteMain"}>{votePercentage}<span className={"exponent"}>%</span></p> {/* Affichage de la note en pourcentage */}
           <p className={s.overview}>{overview}</p>
         </div>
       </div>
