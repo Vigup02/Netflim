@@ -1,0 +1,32 @@
+/* Style pour le corps de la page de film */
+.film-body {
+  background-color: #251B4A; /* Définir la couleur de fond de la page */
+  position: relative; /* Permet au composant FilmHero de se positionner par rapport à ce conteneur */
+  overflow: hidden; /* Empêche les débordements */
+  font-family: 'DM Sans', sans-serif; /* Utilisation de la police DM Sans */
+}
+
+.backgrd {
+  width: 100%; /* L'image de fond occupe toute la largeur */
+  position: absolute; /* Position absolue pour permettre le chevauchement */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Positionne l'image de fond en arrière-plan */
+}
+
+.backgrd img {
+  width: 100%; /* L'image de fond occupe toute la largeur */
+  height: auto; /* Conserve les proportions de l'image */
+  opacity: 0.2; /* Légère transparence */
+  object-fit: cover; /* L'image couvre l'ensemble de son conteneur */
+}
+
+.gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Hauteur du gradient */
+  background: linear-gradient(to top, rgba(37, 27, 74, 1), rgba(37, 27, 74, 0));
+  z-index: 2; /* Positionne le gradient au-dessus de l'image de fond */
+}
