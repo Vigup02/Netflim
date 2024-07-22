@@ -1,10 +1,16 @@
 /* FilmCarousel.module.css */
 
+
+
 .filmCarousel {
     display: flex;
     color: #fff;
     gap: 2rem;
   }
+
+
+
+
   
   .filmImage {
     flex: 1;
@@ -21,20 +27,109 @@
   }
   
   .filmDetails {
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    max-width: 40%;
+    max-width: 30%;
+    gap: 1rem;
   }
   
   .filmDetails h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    width: fit-content;
+  }
+
+
+  .filmDetails h2::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.2s;
+  }
+
+  .filmCarousel:hover h2::after {
+    width: 100%;
   }
   
-  .filmDetails p {
-    margin-bottom: 8px;
+
+
+
+
+  .filmDate {
+    padding: 0.5rem 1rem;
+    background: #3C003E;
+    color: #FC80FF;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+  }
+
+  .exponent {
+    font-size: 1rem; /* Réduit la taille du texte */
+    vertical-align: super;
   }
   
-  .filmDetails p:last-child {
-    margin-bottom: 0;
+  
+  .filmNote {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: #02EC8D;
+    color: #090F2A;
+    font-weight: bold;
+    font-size: 2rem;
+    width: fit-content;
   }
   
+
+  .overview {
+    line-height: 150%;
+    color: #E7E3FF;
+    opacity: 0.7;
+  }
+
+  /* CSS */
+.carousel_container {
+  position: relative; /* Assurez-vous que le conteneur parent est en position relative */
+}
+
+.custom_navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%); /* Centre les flèches verticalement */
+}
+
+.swiper_button_prev,
+.swiper_button_next {
+  background-color: rgba(0, 0, 0, 0.5); /* Exemple de style */
+  color: white; /* Exemple de style */
+  padding: 10px;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

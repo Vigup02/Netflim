@@ -1,6 +1,7 @@
 .carouselBg {
     background: #040920;
     padding: 3.5rem 0;
+    margin: 3rem 0
 }
 
 .containerGlobal {
@@ -8,3 +9,15 @@
   
   }
   
+  .wrapperCarousel {
+    margin: 6rem 0;
+  }
+
+
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 6rem;
+    gap: 2rem;
+  }
+
