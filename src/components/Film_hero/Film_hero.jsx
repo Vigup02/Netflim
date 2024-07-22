@@ -26,7 +26,7 @@ const FilmHero = ({ movie, credits }) => {
                 <div className={styles['film-info']}>
                   <div className={styles['title_header']}>
                     <div className={styles['title']}>
-                      <h1>{movie.title}</h1>
+                      <h1 className={styles['title_film']}>{movie.title}</h1>
                       <div className={styles['date-genre-duree']}>
                         {/* Conversion de la date de sortie en format localisé */}
                         <p>Sortie le {new Date(movie.releaseDate).toLocaleDateString()}</p>
@@ -37,7 +37,7 @@ const FilmHero = ({ movie, credits }) => {
                     </div>
                       {/* Appel de la fonction calculateVoteAverage pour afficher la note moyenne */}
                     <div className={styles['eval']}>
-                        <div className={styles['note']}> {calculateVoteAverage(movie.voteAverage)} %</div>
+                        <div className={styles['filmNoteMain']}> {calculateVoteAverage(movie.voteAverage)} <span className={"exponent"}>%</span></div>
                         <div className={styles['icone']}>
                           <i class='bx bx-heart'></i>
                           <i class='bx bx-bookmark'></i>
@@ -45,7 +45,7 @@ const FilmHero = ({ movie, credits }) => {
                     </div>
                   </div>
                   <div className={styles['summary']}>
-                    <h2> {movie.tagline}</h2>
+                    <h2 className={styles['accroche']}> {movie.tagline}</h2>
                     <p className={styles['sum']}>{movie.overview}</p>
                     {/* Condition pour vérifier si credits est défini */}
                     {credits && (
