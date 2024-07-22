@@ -17,7 +17,7 @@
 }
   
 .film-poster {
-  flex: 1; /* Laisse de l'espace pour l'affiche */
+  flex: 1; /* Flexbox pour aligner l'affiche et les informations */
   max-width: 300px; /* Largeur maximale de l'affiche */
 }
 
@@ -82,7 +82,17 @@
 .icone i {
   margin-left: 0.5rem; /* Espacement entre les icônes */
   cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+  transition: color 0.3s ease; /* Ajoute une transition pour un effet lisse */
 }
+
+.bx-heart, .bx-bookmark {
+  color: #FFFFFF; /* Couleur par défaut des icônes */
+}
+
+.bx-heart-fill, .bx-bookmark-fill {
+  color: orange; /* Couleur des icônes lorsqu'elles sont cliquées */
+}
+
 
 .summary {
   display: flex;
