@@ -9,9 +9,10 @@ export class NetflimApi {
                 throw new Error('Failed to fetch popular movies');
             }
             const data = await response.json();
-            return data.results;
+            return data;
         } catch (error) {
             console.error("Error fetching popular movies:", error);
+            return { results: [] };
         }
     }
 

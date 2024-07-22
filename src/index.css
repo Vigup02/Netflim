@@ -31,7 +31,6 @@ html {
 }
 
 body {
-	line-height: 1;
   margin: 0;
   font-family: "DM Sans", sans-serif;
 }
@@ -59,6 +58,13 @@ table {
 .containerGlobal {
   margin: 0 6rem;
 
+}
+
+h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 600;
+  width: 50%;
 }
 
 
@@ -120,4 +126,17 @@ header .bx-user{
   color: #fff;
   font-size: 1rem;
 }
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  padding: 1rem;
+  background-color: rgba(60, 0, 62, 1);
+  color: #FC80FF;
+  border-radius: 8px;
+  width: auto;
+  font-size: larger !important;
+}
+
+
+
+
 
