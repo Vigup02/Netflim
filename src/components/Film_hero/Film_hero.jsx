@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './style.module.css'; // Assurez-vous que le fichier de styles est correctement importé
 
 const FilmHero = ({ movie, credits }) => {
-    // Fonction pour calculer la note moyenne en pourcentage
+  const [isHeartClicked, setIsHeartClicked] = useState(false);
+  const [isBookmarkClicked, setIsBookmarkClicked] = useState(false);
+  
+  // Fonction pour calculer la note moyenne en pourcentage
     const calculateVoteAverage = (average) => {
         return (average * 10).toFixed(1); // Multiplie par 10 pour obtenir sur 100, et arrondit à une décimale
     };
@@ -13,6 +16,14 @@ const FilmHero = ({ movie, credits }) => {
       const minutes = runtime % 60; // Calcul des minutes
       return `${hours}h ${minutes}m`; // Retourne la durée formatée
   };
+
+    const handleHeartClick = () => {
+      setIsHeartClicked(!isHeartClicked);
+    };
+
+    const handleBookmarkClick = () => {
+        setIsBookmarkClicked(!isBookmarkClicked);
+    };
 
     return (
       <div className={styles['film-hero']}>
@@ -26,7 +37,7 @@ const FilmHero = ({ movie, credits }) => {
                 <div className={styles['film-info']}>
                   <div className={styles['title_header']}>
                     <div className={styles['title']}>
-                      <h1>{movie.title}</h1>
+                      <h1 className={styles['title_film']}>{movie.title}</h1>
                       <div className={styles['date-genre-duree']}>
                         {/* Conversion de la date de sortie en format localisé */}
                         <p>Sortie le {new Date(movie.releaseDate).toLocaleDateString()}</p>
@@ -37,15 +48,15 @@ const FilmHero = ({ movie, credits }) => {
                     </div>
                       {/* Appel de la fonction calculateVoteAverage pour afficher la note moyenne */}
                     <div className={styles['eval']}>
-                        <div className={styles['note']}> {calculateVoteAverage(movie.voteAverage)} %</div>
+                        <div className={styles['filmNoteMain']}> {calculateVoteAverage(movie.voteAverage)} <span className={"exponent"}>%</span></div>
                         <div className={styles['icone']}>
-                          <i class='bx bx-heart'></i>
-                          <i class='bx bx-bookmark'></i>
+                          <i className={`bx ${isHeartClicked ? 'bx-heart-fill' : 'bx-heart'}`} onClick={handleHeartClick}></i>
+                          <i className={`bx ${isBookmarkClicked ? 'bx-bookmark-fill' : 'bx-bookmark'}`} onClick={handleBookmarkClick}></i>
                         </div>
                     </div>
                   </div>
                   <div className={styles['summary']}>
-                    <h2> {movie.tagline}</h2>
+                    <h2 className={styles['accroche']}> {movie.tagline}</h2>
                     <p className={styles['sum']}>{movie.overview}</p>
                     {/* Condition pour vérifier si credits est défini */}
                     {credits && (
