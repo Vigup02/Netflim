@@ -14,7 +14,7 @@ const MovieCard = ({ movie }) => {
       <div className={s.movieCard}>
         <div className={s.movieCardImage}>
           <img src={imageUrl} alt={title} className={s.poster} />
-          <p className={s.filmNote}>{votePercentage}<span className={s.exponent}>%</span></p> {/* Affichage de la note en pourcentage */}
+          <p className={"filmNote"}>{votePercentage}<span className={s.exponent}>%</span></p> {/* Affichage de la note en pourcentage */}
         </div>
         <div className={s.details}>
           <h3 className={s.title}>{title}</h3>
