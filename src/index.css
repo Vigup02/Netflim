@@ -55,6 +55,9 @@ table {
 
 
 
+
+
+
 .containerGlobal {
   margin: 0 6rem;
 
@@ -72,60 +75,6 @@ a {
   text-decoration: none;
 }
 
-header {
-  padding: 3.5rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header a.btnProfile {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  transition: 0.2s;
-  position: relative;
-}
-
-header a.btnProfile::before, header a.btnProfile::after {
-  content: '';
-  position: absolute;
-  border: 2px solid #fff; /* Couleur et épaisseur de la bordure */
-  top: 2px; /* Décale la bordure vers le haut */
-  bottom: 2px; /* Décale la bordure vers le bas */
-  left: 2px; /* Décale la bordure vers la gauche */
-  right: 2px;/* Décale la bordure vers la droite */
-  transition: 0.1s ease-in-out;
-  border-radius: 4px;
-}
-
-
-header a.btnProfile:hover::before, header a.btnProfile:hover::after {
-  position: absolute;
-  border: 4px solid #fff; /* Couleur et épaisseur de la bordure */
-  top: 2px; /* Décale la bordure vers le haut */
-  bottom: 2px; /* Décale la bordure vers le bas */
-  left: 2px; /* Décale la bordure vers la gauche */
-  right: 2px;/* Décale la bordure vers la droite */
-}
-
-
-
-
-header #logo {
-  width: 137px;
-  height: 23px;
-  background-image: url(/src/assets/images/logo.png);
-  background-size: cover;
-}
-
-header .bx-user{
-  color: #fff;
-  font-size: 1rem;
-}
 
 .swiper-button-prev:after, .swiper-button-next:after {
   padding: 1rem;
