@@ -1,38 +1,31 @@
 import React from 'react';
-
+import s from './style.module.css'; // Importez le fichier CSS module
 
 const ProfilInfos = ({}) => {
     return (
-        <div>
-            <div>
+        <div className={s.profilInfosContainer}>
+            <div className={s.profilInfosGeneral}>
                 <p>Nom</p>
-                <div>
-                    <p>Chaka</p>
-                    <div></div>
+                <div className={s.profilInfosSubContainer}>
+                    <p className={s.infosVisibles}>Chaka</p>
                 </div>
                 <p>Prénom</p>
-                <div>
-                    <p>Bouya</p>
-                    <div></div>
+                <div className={s.profilInfosSubContainer}>
+                    <p className={s.infosVisibles}>Bouya</p>
                 </div>
                 <p>Pseudo</p>
-                <div>
-                    <p>Bouyachaka</p>
-                    <div></div>
+                <div className={s.profilInfosSubContainer}>
+                    <p className={s.infosVisibles}>Bouyachaka</p>
                 </div>
                 <p>Adresse mail</p>
-                <div>
-                    <p>bouyachaka@weshalors.com</p>
-                    <div> <button>modifier mon adresse mail</button></div>
+                <div className={s.profilInfosSubContainer}>
+                    <p className={s.infosVisibles}>bouyachaka@weshalors.com</p>
                 </div>
                 <p>Mot de passe</p>
-                <div>
-                    <p>***********************</p>
-                    <div> <button>modifier mon adresse mail</button></div>
+                <div className={s.profilInfosSubContainer}>
+                    <p className={s.infosVisibles}>***********************</p>
                 </div>
             </div>
-            <button>Enregistrer mes modifications</button>
-            <button>supprimer mon compte</button>
         </div>
     );
 };

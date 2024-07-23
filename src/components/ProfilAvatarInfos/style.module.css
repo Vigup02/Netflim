@@ -3,20 +3,41 @@
 .container {
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 32px 0px;
+    gap: 32px;
 }
 
 .avatar {
-    width: 150px;
-    height: 150px;
+    width: 256px;
+    height: 256px;
     border-radius: 50%;
-    margin-right: 20px;
+    border: 4px solid #E4CCFF;
 }
 
 .info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.pseudo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.pseudo_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.highlight {
+    color: #FC80FF;
+    font-weight: bold;
 }
