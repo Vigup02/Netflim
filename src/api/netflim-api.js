@@ -2,9 +2,9 @@ const BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = "3a71a64794e22e5d53730973eb8ec3df";
 
 export class NetflimApi {
-    static async fetchAll() {
+    static async fetchAll(language = 'fr') {
         try {
-            const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`);
+            const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=${language}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch popular movies');
             }
