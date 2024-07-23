@@ -26,11 +26,11 @@ const Home = () => {
 
   return (
     <div className={s.wrapperCarousel}>
-      <div className={s.containerGlobal}>
+      <div className="containerGlobal">
         <h1>Les 20 films que l’équipe de Netflim a adorés</h1>
       </div>
       <div className={s.carouselBg}>
-        <div className={s.containerGlobal}>
+        <div className="containerGlobal">
           <Carousel movies={topMovies} />
         </div>
       </div> 

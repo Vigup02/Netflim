@@ -119,3 +119,35 @@ a {
   }
   
 
+  @media (max-width: 992px) {
+
+
+
+    h1 {
+      width: 100%;
+    }
+
+    .containerGlobal {
+      margin: 0 2rem;
+    
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+      display: none;
+    }
+
+  }
+  
+  @media (max-width: 576px) {
+
+
+
+    h1 {
+      font-size: 32px;
+    }
+
+
+  }
+  
+
+

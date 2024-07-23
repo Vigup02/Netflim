@@ -144,3 +144,27 @@
 .page-film-date {
   text-transform: uppercase;
 }
+
+
+@media (max-width: 992px) {
+
+  .film-details {
+    flex-direction: column;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items:flex-start;
+  }
+
+  .date-genre-duree {
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+  }
+
+  .film-info {
+    margin: 0;
+  }
+
+}

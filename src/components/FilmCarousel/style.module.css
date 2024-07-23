@@ -9,8 +9,6 @@
   }
 
 
-
-
   
   .filmImage {
     flex: 1;
@@ -105,12 +103,25 @@
 
 
 
+@media (max-width: 992px) {
 
+  .filmCarousel {
+    flex-direction: column;
+  }
 
+  .filmImage {
+    max-width: 99%;
+  }
 
+  .filmDetails {
+    max-width: 100%;
+  }
 
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
 
-
+}
 
 
 
