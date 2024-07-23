@@ -65,7 +65,9 @@ const FilmHero = ({ movie, credits }) => {
                         </div>
                       </div>
                       <div className={styles['summary']}>
-                        <h2 className={styles['accroche']}> {movie.tagline}</h2>
+                        {movie.tagline && (
+                          <h2 className={styles['accroche']}>{movie.tagline}</h2>
+                        )}
                         <p className={styles['sum']}>{movie.overview}</p>
 
                       </div>
