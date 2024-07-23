@@ -19,5 +19,6 @@
     flex-wrap: wrap;
     margin: 0 6rem;
     gap: 2rem;
+    justify-content: space-between;
   }
 
