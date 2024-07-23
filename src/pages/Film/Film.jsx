@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { NetflimApi } from '../../api/netflim-api.js';
 import FilmHero from '../../components/Film_hero/Film_hero.jsx';
 import styles from './style.module.css';
 
 
 const Film = () => {
+  const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const [credits, setCredits] = useState(null);
-  const movieId = 12; // Remplacez avec l'ID réel du film
 
   useEffect(() => {
       const fetchMovieData = async () => {
