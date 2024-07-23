@@ -14,12 +14,10 @@
     transition: 0.3s ease-in;
   }
 
-
   .movieCard:hover {
     box-shadow: inset 0px 0px 0px 1px rgba(252,128,255,1);
   }
 
-  
   .poster {
     width: 100%;
     height: auto;

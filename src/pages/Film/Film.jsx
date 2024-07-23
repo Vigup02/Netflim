@@ -5,6 +5,7 @@ import FilmHero from '../../components/Film_hero/Film_hero.jsx';
 import styles from './style.module.css';
 
 
+
 const Film = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
