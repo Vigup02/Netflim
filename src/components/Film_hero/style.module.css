@@ -129,6 +129,8 @@
 
 .film-credits {
   color: #E7E3FF;
+  display: flex;
+  gap: 1rem;
 }
 
 .film-credits p{

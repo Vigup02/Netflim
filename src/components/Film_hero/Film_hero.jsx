@@ -58,10 +58,6 @@ const FilmHero = ({ movie, credits }) => {
                           {/* Appel de la fonction calculateVoteAverage pour afficher la note moyenne */}
                         <div className={styles['eval']}>
                             <div className="filmNoteMain"> {calculateVoteAverage(movie.voteAverage)}<span className={"exponent"}>%</span></div>
-                            <div className={styles['icone']}>
-                              <i className={`bx ${isHeartClicked ? 'bx-heart-fill' : 'bx-heart'}`} onClick={handleHeartClick}></i>
-                              <i className={`bx ${isBookmarkClicked ? 'bx-bookmark-fill' : 'bx-bookmark'}`} onClick={handleBookmarkClick}></i>
-                            </div>
                         </div>
                       </div>
                       <div className={styles['summary']}>
