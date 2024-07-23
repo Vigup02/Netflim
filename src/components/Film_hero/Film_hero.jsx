@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
-import styles from './style.module.css'; // Assurez-vous que le fichier de styles est correctement importé
+import React, { useState } from 'react'; // Importation de React et du hook useState
+import styles from './style.module.css'; // Importation des styles CSS modulaires
 
-// Fonction de formatage des dates
+// Fonction pour formater une date
 const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  const options = { day: 'numeric', month: 'short', year: 'numeric' };
-  const formattedDate = date.toLocaleDateString('fr-FR', options);
+  const date = new Date(dateString); // Conversion de la chaîne de caractères en objet Date
+  const options = { day: 'numeric', month: 'short', year: 'numeric' }; // Options pour formater la date
+  const formattedDate = date.toLocaleDateString('fr-FR', options); // Formatage de la date en français
 
-  // Remplacer les noms de mois longs par des versions abrégées
+  // Réduction des mois en les abrégeant à trois lettres
   return formattedDate.replace(/(?<=\s)(\w{4,})(?=\s)/g, (match) => match.slice(0, 3) + '.');
 };
 
+// Composant FilmHero
 const FilmHero = ({ movie, credits }) => {
-  const [isHeartClicked, setIsHeartClicked] = useState(false);
-  const [isBookmarkClicked, setIsBookmarkClicked] = useState(false);
-  
+  const [isHeartClicked, setIsHeartClicked] = useState(false); // État pour suivre le clic sur le cœur
+  const [isBookmarkClicked, setIsBookmarkClicked] = useState(false); // État pour suivre le clic sur le signet
+
   // Fonction pour calculer la note moyenne en pourcentage
   const calculateVoteAverage = (average) => {
-    return (average * 10).toFixed(0); // Multiplie par 10 pour obtenir sur 100, et arrondit à une décimale
+    return (average * 10).toFixed(0); // Multiplie par 10 pour obtenir sur 100, et arrondit à l'entier
   };
 
   // Fonction pour convertir la durée en heures et minutes
@@ -59,7 +60,7 @@ const FilmHero = ({ movie, credits }) => {
                 </div>
                 {/* Appel de la fonction calculateVoteAverage pour afficher la note moyenne */}
                 <div className={styles['eval']}>
-                  <div className="filmNoteMain"> {calculateVoteAverage(movie.voteAverage)}<span className={"exponent"}>%</span></div>
+                  <div className="filmNoteMain">{calculateVoteAverage(movie.voteAverage)}<span className={"exponent"}>%</span></div>
                 </div>
               </div>
               <div className={styles['summary']}>
