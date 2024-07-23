@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, {} from 'react';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import Home from './pages/Home/Home'; // Importez Home comme composant par défaut
 import Profil from './pages/Profil/Profil'; // Importez Profil comme composant par défaut

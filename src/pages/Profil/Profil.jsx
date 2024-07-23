@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NetflimApi } from '../../api/netflim-api.js';
+import ProfilBase from '../../components/ProfilBase/ProfilBase.jsx';
 import ProfilHistorique from '../../components/ProfilHistorique/ProfilHistorique.jsx';
 import MaWatchlist from '../../components/ProfilMaWatchlist/ProfilMaWatchlist.jsx';
-import ProfilBase from '../../components/ProfilBase/ProfilBase.jsx';
 import ProfilInfos from '../../components/ProfilInfos/ProfilInfos.jsx';
-import ProfilNavbar from '../../components/ProfilNavBar/ProfilNavBar.jsx'; // Importez ProfilNavbar
+import ProfilNavbar from '../../components/ProfilNavBar/ProfilNavBar.jsx';
+import ProfilAvatarInfos from '../../components/ProfilAvatarInfos/ProfilAvatarInfos.jsx';
 
 const Profil = () => {
     const [historiqueMovies, setHistoriqueMovies] = useState([]);
@@ -21,7 +22,15 @@ const Profil = () => {
                     const remainingMovies = fiftyMovies.filter(movie => !tenRandomMovies.includes(movie));
                     const sixRandomMovies = getRandomMovies(remainingMovies, 6);
 
-                    setHistoriqueMovies(tenRandomMovies);
+                    const formattedHistoriqueMovies = await Promise.all(tenRandomMovies.map(async (movie) => {
+                        const detailedMovie = await NetflimApi.fetchById(movie.id);
+                        return {
+                            ...movie, // Conserve les attributs originaux
+                            ...detailedMovie // Ajoute les détails du film
+                        };
+                    }));
+
+                    setHistoriqueMovies(formattedHistoriqueMovies);
                     setWatchlistMovies(sixRandomMovies);
                 }
             } catch (error) {
@@ -53,9 +62,10 @@ const Profil = () => {
     };
 
     return (
-        <div>
+        <div className="containerGlobal">
             <h1>Profil</h1>
-            <ProfilNavbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> {/* Utilisation de ProfilNavbar */}
+            <ProfilAvatarInfos pseudo="Bouyachaka" historiqueMovies={historiqueMovies} />
+            <ProfilNavbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
             {renderContent()}
         </div>
     );
