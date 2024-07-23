@@ -19,8 +19,6 @@
     box-shadow: inset 0px 0px 0px 1px rgba(252,128,255,1);
   }
 
-
-
   
   .poster {
     width: 100%;
@@ -91,6 +89,7 @@
     text-decoration: none;
     color: inherit;
     width: 22%;
+    margin-bottom: 3rem;
   }
   
   
