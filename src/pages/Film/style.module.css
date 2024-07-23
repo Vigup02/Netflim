@@ -17,7 +17,7 @@
 .backgrd img {
   width: 100%; /* L'image de fond occupe toute la largeur */
   height: auto; /* Conserve les proportions de l'image */
-  opacity: 0.2; /* Légère transparence */
+  opacity: 0.1; /* Légère transparence */
   object-fit: cover; /* L'image couvre l'ensemble de son conteneur */
 }
 
