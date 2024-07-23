@@ -28,6 +28,7 @@ La page de profil comprend :
 - Les films favoris de l'utilisateur
 - Les derniers films vus par l'utilisateur
 - Les informations personnelles de l'utilisateur
+- Barre de Navigation interractive et bouton en bas de Mon Profil fontionnel
 
 ## Développement
 
