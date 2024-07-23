@@ -25,7 +25,7 @@ const ProfilBase = ({ historiqueMovies, watchlistMovies }) => {
 
     return (
         <div>
-            <h3>Historique </h3>
+            <h3>Mes Favoris </h3>
             {renderMovies(randomHistoriqueMovies)}
 
             <h3>Ma Watchlist </h3>

@@ -3,10 +3,13 @@ import { NetflimApi } from '../../api/netflim-api.js';
 import ProfilHistorique from '../../components/ProfilHistorique/ProfilHistorique.jsx';
 import MaWatchlist from '../../components/ProfilMaWatchlist/ProfilMaWatchlist.jsx';
 import ProfilBase from '../../components/ProfilBase/ProfilBase.jsx';
+import ProfilInfos from '../../components/ProfilInfos/ProfilInfos.jsx';
+import ProfilNavbar from '../../components/ProfilNavBar/ProfilNavBar.jsx'; // Importez ProfilNavbar
 
 const Profil = () => {
     const [historiqueMovies, setHistoriqueMovies] = useState([]);
     const [watchlistMovies, setWatchlistMovies] = useState([]);
+    const [selectedTab, setSelectedTab] = useState('profil');
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -34,14 +37,26 @@ const Profil = () => {
         return shuffled.slice(0, numMovies);
     };
 
+    const renderContent = () => {
+        switch (selectedTab) {
+            case 'profil':
+                return <ProfilBase historiqueMovies={historiqueMovies} watchlistMovies={watchlistMovies} />;
+            case 'historique':
+                return <ProfilHistorique movies={historiqueMovies} />;
+            case 'watchlist':
+                return <MaWatchlist movies={watchlistMovies} />;
+            case 'infos':
+                return <ProfilInfos />;
+            default:
+                return null;
+        }
+    };
+
     return (
         <div>
             <h1>Profil</h1>
-            <ProfilBase historiqueMovies={historiqueMovies} watchlistMovies={watchlistMovies} />
-            <h2>Historique</h2>
-            <ProfilHistorique movies={historiqueMovies} />
-            <h2>Ma Watchlist</h2>
-            <MaWatchlist movies={watchlistMovies} />
+            <ProfilNavbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} /> {/* Utilisation de ProfilNavbar */}
+            {renderContent()}
         </div>
     );
 };
