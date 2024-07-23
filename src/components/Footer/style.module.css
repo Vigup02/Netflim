@@ -1,0 +1,23 @@
+footer {
+    background: #040920;
+    padding: 2rem 0;
+}
+
+footer .logo {
+    width: 137px;
+    height: 23px;
+    background-image: url(/src/assets/images/logo-footer.png);
+    background-size: cover;
+    display: block;
+  }
+
+  footer p {
+    color: #fff;
+    opacity: 0.5;
+  }
+
+.containerFooter {
+    margin: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+}

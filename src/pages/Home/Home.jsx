@@ -15,7 +15,7 @@ const Home = () => {
         setTopMovies(topRatedMovies.results.slice(0, 5));
 
         const allMovies = await NetflimApi.fetchAll();
-        setMovies(allMovies.results.slice(5, 20));
+        setMovies(allMovies.results.slice(4, 20));
       } catch (error) {
         console.error('Failed to fetch movies:', error);
       }

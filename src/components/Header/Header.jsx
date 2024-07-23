@@ -18,7 +18,7 @@ const Header = () => {
       return ((
         <>
           <Link to="/" className={s.logo}></Link>
-          <Link className={s.btnProfileFilm} to="/film">Mon profil<i className='bx bx-user'></i></Link>
+          <Link className={s.btnProfileFilm} to="/profil">Mon profil<i className='bx bx-user'></i></Link>
         </>
       ));
     } else {
