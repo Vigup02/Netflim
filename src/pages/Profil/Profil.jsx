@@ -6,6 +6,7 @@ import MaWatchlist from '../../components/ProfilMaWatchlist/ProfilMaWatchlist.js
 import ProfilInfos from '../../components/ProfilInfos/ProfilInfos.jsx';
 import ProfilNavbar from '../../components/ProfilNavBar/ProfilNavBar.jsx';
 import ProfilAvatarInfos from '../../components/ProfilAvatarInfos/ProfilAvatarInfos.jsx';
+import s from './style.module.css';
 
 const Profil = () => {
     const [historiqueMovies, setHistoriqueMovies] = useState([]);
@@ -62,11 +63,18 @@ const Profil = () => {
     };
 
     return (
-        <div className="containerGlobal">
-            <h1>Profil</h1>
-            <ProfilAvatarInfos pseudo="Bouyachaka" historiqueMovies={historiqueMovies} />
-            <ProfilNavbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-            {renderContent()}
+        <div className="containerGlobal" >
+            <div className={s.profil_container}>
+                <ProfilAvatarInfos pseudo="Bouyachaka" historiqueMovies={historiqueMovies} />
+                <div>
+                <ProfilNavbar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+                {selectedTab === 'profil' && <ProfilBase historiqueMovies={historiqueMovies} watchlistMovies={watchlistMovies} setSelectedTab={setSelectedTab} />}
+                {selectedTab === 'historique' && <ProfilHistorique movies={historiqueMovies} />}
+                {selectedTab === 'watchlist' && <MaWatchlist movies={watchlistMovies} />}
+                {selectedTab === 'infos' && <ProfilInfos />} {/* Assurez-vous que ProfilInfos est bien défini */}
+                </div>
+                
+            </div>    
         </div>
     );
 };

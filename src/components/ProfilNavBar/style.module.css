@@ -1,0 +1,18 @@
+/* src/components/ProfilNavbar/ProfilNavbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: start;
+    gap: 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navItem {
+    cursor: pointer;
+}
+
+.navItem.selected {
+    border-bottom: 2px solid #FC80FF;
+}

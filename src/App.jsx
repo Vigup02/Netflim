@@ -30,6 +30,7 @@ const AppWrapper = () => {
           <Route index element={<Home />} />
           <Route path="profil" element={<Profil />} />
           <Route path="film/:movieId" element={<Film />} />
+          <Route path="film/:id" element={<Film />} />
         </Route>
       </Routes>
     </BrowserRouter>

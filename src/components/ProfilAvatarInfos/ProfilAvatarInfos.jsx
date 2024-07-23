@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './style.module.css';
+import ProfilAvatarImage from '../../assets/images/ProfilAvatar.jpg';
 
 const ProfilAvatarInfos = ({ pseudo, historiqueMovies }) => {
     const totalMovies = historiqueMovies.length;
@@ -15,14 +16,17 @@ const ProfilAvatarInfos = ({ pseudo, historiqueMovies }) => {
     return (
         <div className={s.container}>
             <img 
-                src="https://via.placeholder.com/150" 
+                src= {ProfilAvatarImage} 
                 alt="Profile" 
                 className={s.avatar} 
             />
             <div className={s.info}>
-                <h3>{pseudo}</h3>
-                <p>{totalMovies} films regardés</p>
-                <p>Total de durée visionnage: {hours} h {minutes} min</p>
+                <h3 className={s.pseudo}>{pseudo}</h3>
+                <div className={s.pseudo_infos}>
+                    <p><span className={s.highlight}>{totalMovies}</span> films regardés</p>
+                    <p>Total de durée visionnage: <span className={s.highlight}>{hours} h {minutes} min</span></p>
+                </div>
+                
             </div>
         </div>
     );

@@ -1,35 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import s from './style.module.css';
 
-const ProfilVignette = ({ title, posterPath }) => {
+const ProfilVignette = ({ id, title, posterPath }) => {
+    const navigate = useNavigate();
     const posterUrl = `https://image.tmdb.org/t/p/w500${posterPath}`;
+
+    const handleClick = () => {
+        navigate(`/film/${id}`);
+    };
+
     return (
-        <div style={styles.container}>
-            <img src={posterUrl} alt={title} style={styles.poster} />
-            <div style={styles.title}>{title}</div>
+        <div className={s.container} onClick={handleClick}>
+            <img src={posterUrl} alt={title} className={s.poster} />
+            <div className={s.title}>{title}</div>
         </div>
     );
-};
-
-const styles = {
-    container: {
-        position: 'relative',
-        width: '200px',
-        height: '300px',
-        margin: '10px'
-    },
-    poster: {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover'
-    },
-    title: {
-        position: 'absolute',
-        bottom: '10px',
-        left: '10px',
-        color: 'white',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        padding: '5px'
-    }
 };
 
 export default ProfilVignette;
