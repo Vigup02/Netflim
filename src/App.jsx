@@ -29,7 +29,7 @@ const AppWrapper = () => {
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="profil" element={<Profil />} />
-          <Route path="film" element={<Film />} />
+          <Route path="film/:movieId" element={<Film />} />
         </Route>
       </Routes>
     </BrowserRouter>
