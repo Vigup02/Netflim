@@ -12,8 +12,11 @@ const ProfilVignette = ({ id, title, posterPath }) => {
 
     return (
         <div className={s.container} onClick={handleClick}>
-            <img src={posterUrl} alt={title} className={s.poster} />
-            <div className={s.title}>{title}</div>
+            <div className={s.overlay}>
+                <img src={posterUrl} alt={title} className={s.poster} />
+                <div className={s.title}>{title}</div>
+
+            </div>
         </div>
     );
 };
